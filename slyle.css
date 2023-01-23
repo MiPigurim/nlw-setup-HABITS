@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Desconsidera os preenchimentos internos */
+}
+
+body {
+  background-color: #09090a;
+  color: white;
+
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Vai pegar toda a largura e justificar o conteúdo, colocando espaço entre os elementos. */
+
+  padding: 48px; /* Preenchimento interno para todos os cantos */
+
+  position: fixed;
+  width: 100%;
+  background-color: #09090a;
+}
+
+button {
+  padding: 16px 24px; /* Vai aplicar ao botão em cima e em baixo 16 pixels e dos lados 24 */
+  border-radius: 8px;
+  border: 1px solid #8b5cf6;
+  background-color: transparent;
+  color: white;
+
+  display: flex;
+  /* Disposição dos elementos dentro de um elemento, no caso, disposição do texto e ícone (imagem) dentro do botão 
+flex é flexível, joga o elemento para baixo. A flexibilidade permite alinhar os ítens no centro
+inline é ao lado, em linha*/
+  align-items: center;
+  gap: 12px; /* Espaço entre os elementos */
+
+  font-family: "inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+#form-habits {
+  display: flex;
+
+  padding: 182px 48px 48px;
+  width: fit-content;
+}
+
+.habits {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.habit {
+  /* border: 1px solid red; */
+  width: 64px;
+  height: 64px;
+
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.day div {
+  margin-bottom: 8px; /* Margem a baixo. 8+24=32px */
+
+  font-family: "Roboto Mono";
+  font-size: 20px;
+  line-height: 125%;
+
+  color: #a1a1aa;
+
+  text-align: center;
+}
+
+input {
+  appearance: none; /* Para poder usar o checkbox */
+  -webkit-appearance: none; /* Alguns navegadores precisam desse prefixo na frente */
+
+  width: 64px;
+  height: 64px;
+
+  border: 2px solid #27272a;
+  border-radius: 8px;
+
+  background: #18181b;
+}
+
+input:checked {
+  background: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
+
+@media (max-width: 570px) {
+  button div {
+    display: none;
+    /* Para quando a tela do tamanho de 0 a 570 px a div que tem dentro do botão, que é a mensagem  "Registrar o meu dia" não irá aparecer, só vai aparecer o + */
+  }
+}
